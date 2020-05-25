@@ -1,11 +1,13 @@
 $(document).ready(appendingToDom);
 let totalMonthly = 0;
+//function for adding input information to table on DOM
 function appendingToDom(){
+    //button for adding 
     $('#enterButton').on('click', function updatingEmployee(){
         
         
         
-        
+        //taking input values and assigning them to table entries
             let firstName = $('#firstNameInput').val();
             console.log(firstName);
             
@@ -18,6 +20,7 @@ function appendingToDom(){
         let total = $('#totalCosts');
         total.text('Total Monthly: $' + Math.round(totalMonthly));
         if (totalMonthly > 20000) {
+            //change display text
             $('#totalCosts').css('text-shadow', '2px 2px 5px red');
         }
         else{
@@ -34,7 +37,7 @@ function appendingToDom(){
             //empty input fields
            empty();
            
-           //addEmployee(firstName, lastName, idNumber, jobTitle, annualSalary);
+           //addEmployee(firstName, lastName, idNumber, jobTitle, annualSalary) to the table;
             
             let listElement = $('<tr></tr>');
             listElement.append(`<td>${firstName}</td>`);
@@ -46,6 +49,7 @@ function appendingToDom(){
             
             $('table tbody').append(listElement);
         }
+        //delete button
         $('.delete-button').on('click', function (event) {
             const element = event.target
             $(element).parents('tr').fadeOut(3000);
@@ -54,7 +58,7 @@ function appendingToDom(){
 });
 }
 
-
+//function to empty input fields
 function empty(){
     $('#firstNameInput').val('');
     $('#lastNameInput').val('');
