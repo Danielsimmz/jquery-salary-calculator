@@ -1,0 +1,41 @@
+table{
+    width: 90%;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+th{
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+thead{
+    background-color: rgb(40, 24, 24);
+    color: white;
+}
+td{
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 70px 0;
+}
+th, td{
+    padding: 70px 0;
+    text-align: center;
+    border-left: black;
+    border: 1px solid black;
+    
+}
+tr:last-child td{
+    border-bottom: 0px;
+    text-align: center;
+    padding: 70px 0;
+}
+h1{
+    background-color: grey;
+    text-align: center;
+    width: auto;
+    height: 100%;
+    padding: 70px 0;
+}
+p{
+    font-size: xx-large;
+}
